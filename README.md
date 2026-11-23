@@ -1,5 +1,7 @@
 # dsh-workflow-model-guard
 
+[![test](https://github.com/Rayzenchen/dsh-workflow-model-guard/actions/workflows/test.yml/badge.svg)](https://github.com/Rayzenchen/dsh-workflow-model-guard/actions/workflows/test.yml)
+
 > **工作流子智能体模型护栏** · [English](README.en.md)
 
 让「子智能体」插件里那份**「允许选择的模型」白名单**，也管到 `workflow` 这条派子代理的路上。

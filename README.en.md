@@ -1,5 +1,7 @@
 # dsh-workflow-model-guard
 
+[![test](https://github.com/Rayzenchen/dsh-workflow-model-guard/actions/workflows/test.yml/badge.svg)](https://github.com/Rayzenchen/dsh-workflow-model-guard/actions/workflows/test.yml)
+
 > **Workflow subagent model guard** · [中文](README.md)
 
 Makes the subagent model-selection allow-list govern the `workflow` tool too.
