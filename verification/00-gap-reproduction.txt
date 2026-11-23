@@ -1,0 +1,10 @@
+=== A: subagent tool (session log tool/result seq=213 step=29) ===
+Error: child LLM route "deepseek-official/deepseek-flash" is not allowed for this Session
+
+=== B: workflow agent() (session log tool/result seq=220 step=29) ===
+workflow "route-probe-gap" completed (1 agent).
+Return value:
+{
+  "got": "null — child failed WITHOUT a policy error"
+}
+

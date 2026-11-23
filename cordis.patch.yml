@@ -1,0 +1,33 @@
+# Bundle patch for @local/dsh-workflow-model-guard.
+#
+# One Host row, mounted at the profile ROOT — deliberately not inside the
+# `standard` agent preset, for the same two reasons as @local/dsh-todo-discipline:
+#
+#   * A root-level row's context is untagged, and `scopeTarget`'s filter admits
+#     an untagged listener to every scope (`if (tag === undefined) return true`),
+#     so the agent-scoped `tools/pre-execute` waterfall reaches this plugin, and
+#     the prompt section it registers is merged into every agent scope.
+#   * A nested insert into the preset is not an option anyway: `applyEntryPatches`
+#     only inserts into a row carrying `group: true`, and the shipped
+#     `preset-standard` row (`@deepseek-ai/dsh-agent-preset`) does not carry it.
+#
+# The row id must match the plugin's `name` export.
+#
+# Every knob has a default; override here to change one, e.g.:
+#
+#   - insert:
+#       - id: dsh-workflow-model-guard
+#         name: '@local/dsh-workflow-model-guard'
+#         config:
+#           enabled: true                 # master switch for both layers
+#           toolName: workflow            # the tool to police
+#           discoveryToolName: list_subagent_models
+#           injectGuidance: true          # soft layer
+#           enforceRoutes: true           # hard layer
+#           unresolvedRoute: allow        # allow | deny | ask  (what to do with a route
+#                                         #   that cannot be read statically)
+#           denyWhenPolicyUnreadable: false  # deny when the allowed list cannot be read at all
+#
+- insert:
+    - id: dsh-workflow-model-guard
+      name: '@local/dsh-workflow-model-guard'

@@ -1,0 +1,8 @@
+dsh: warning: 1 entry did not activate
+wmg-broken (@local/wmg-broken): Error: wmg-broken: deliberate plugin failure for the boot-tolerance test
+    at new apply (file:///private/tmp/wmg-verify/broken-plugin/index.js:4:9)
+    at Fiber.execute (file:///Applications/DeepSeek%20Harness.app/Contents/Resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:1068:24)
+    at file:///Applications/DeepSeek%20Harness.app/Contents/Resources/app.asar/dsh/node_modules/@deepseek-ai/cordis/lib/index.js:1142:34
+    at file:///tmp/wmg-verify/home/.dsh/profiles/hl/#wmg-broken
+    at file:///tmp/wmg-verify/home/.dsh/profiles/hl/#include
+PONG

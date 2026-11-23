@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Workflow subagent model guard",
+    "description": "Extends the subagent model-selection allow-list to the workflow tool: while the workflow tool is mounted, a system-prompt section tells the model to call list_subagent_models first and choose only authorized routes (soft); a tools/pre-execute gate reads the provider/model named by a workflow script's agent() calls and denies an off-list route, naming it, listing the allowed routes, and giving two ways to fix the script (hard).",
+    "detail": "docs/DETAIL.md"
+  }
+}

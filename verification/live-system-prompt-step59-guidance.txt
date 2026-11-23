@@ -1,0 +1,7 @@
+Workflow subagent model selection: this Session restricts which LLM routes a child agent may be given (the same list the `list_subagent_models` tool reports).
+Before you pass `provider` or `model` to a workflow `agent()` call, call `list_subagent_models` and choose only from the routes it returns — a route outside this list is rejected before the run starts, and a route that is merely unavailable fails silently as `null` instead of raising.
+If you are unsure, omit both `provider` and `model`: the child then inherits the parent Agent route, which is always allowed.
+Allowed routes for this Session:
+- passion8/grok-4.7
+- pinaic/deepseek-v4.1-flash
+- opencode-go/deepseek-v4.1-flash

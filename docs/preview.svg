@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="A workflow script branching into three child agents, with the route outside the Session policy stopped before it starts">
+  <defs>
+    <linearGradient id="wmp-shield" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFC64D"/>
+      <stop offset="1" stop-color="#E5861A"/>
+    </linearGradient>
+    <linearGradient id="wmp-route" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#6FD8BC"/>
+      <stop offset="1" stop-color="#17A98A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="300" rx="20" fill="#F3F5F9"/>
+
+  <!-- The workflow script that names child routes -->
+  <rect x="40" y="84" width="204" height="132" rx="16" fill="#FFFFFF" stroke="#D9E1EC" stroke-width="1.5"/>
+  <circle cx="66" cy="108" r="3.6" fill="#D8E0EA"/>
+  <circle cx="78" cy="108" r="3.6" fill="#D8E0EA"/>
+  <circle cx="90" cy="108" r="3.6" fill="#D8E0EA"/>
+  <rect x="64" y="128" width="120" height="9" rx="4.5" fill="#E1E7EF"/>
+  <rect x="64" y="146" width="88" height="9" rx="4.5" fill="#E1E7EF"/>
+  <!-- the route this script asks for -->
+  <rect x="64" y="164" width="152" height="9" rx="4.5" fill="#F7C878"/>
+  <rect x="64" y="182" width="104" height="9" rx="4.5" fill="#E1E7EF"/>
+
+  <!-- Two authorized routes reach their child agents -->
+  <path d="M248 150 C 330 150 356 92 480 92" fill="none" stroke="url(#wmp-route)" stroke-width="2.6"
+        stroke-linecap="round"/>
+  <path d="M248 150 C 330 150 356 208 480 208" fill="none" stroke="url(#wmp-route)" stroke-width="2.6"
+        stroke-linecap="round"/>
+
+  <!-- The third route is checked before it starts, and stops here -->
+  <path d="M248 150 L 430 150" fill="none" stroke="#E5861A" stroke-width="2.4" stroke-dasharray="5 6"
+        stroke-linecap="round"/>
+  <g>
+    <path d="M462 118 L488 128 V148 C488 163 476 175 462 180 C448 175 436 163 436 148 V128 Z"
+          fill="url(#wmp-shield)"/>
+    <path d="M454 138 L470 158 M470 138 L454 158" fill="none" stroke="#FFFFFF" stroke-width="2.6"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Child agents: two start, the blocked one never does -->
+  <g>
+    <rect x="492" y="74" width="36" height="36" rx="11" fill="#FFFFFF" stroke="#A9E4D2" stroke-width="1.8"/>
+    <circle cx="510" cy="92" r="6.4" fill="#17A98A"/>
+  </g>
+  <g>
+    <rect x="492" y="190" width="36" height="36" rx="11" fill="#FFFFFF" stroke="#A9E4D2" stroke-width="1.8"/>
+    <circle cx="510" cy="208" r="6.4" fill="#17A98A"/>
+  </g>
+  <g opacity="0.42">
+    <rect x="492" y="132" width="36" height="36" rx="11" fill="#FFFFFF" stroke="#CBD5E2" stroke-width="1.8"/>
+    <circle cx="510" cy="150" r="6.4" fill="#CBD5E2"/>
+  </g>
+</svg>

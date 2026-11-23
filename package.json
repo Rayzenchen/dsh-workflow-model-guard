@@ -1,0 +1,60 @@
+{
+  "name": "@local/dsh-workflow-model-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Extend the subagent model-selection allow-list to the workflow tool: a system-prompt section that appears only while the workflow tool is mounted, and a tools/pre-execute gate that denies a workflow script asking for an off-list provider/model route.",
+  "license": "MIT",
+  "author": {
+    "name": "Rayzenchen",
+    "url": "https://github.com/Rayzenchen"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "workflow",
+    "subagent",
+    "model-routing",
+    "guardrail"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rayzenchen/dsh-workflow-model-guard.git"
+  },
+  "homepage": "https://github.com/Rayzenchen/dsh-workflow-model-guard#readme",
+  "bugs": {
+    "url": "https://github.com/Rayzenchen/dsh-workflow-model-guard/issues"
+  },
+  "scripts": {
+    "test": "node tools/self-test.mjs"
+  },
+  "meta": {
+    "title": "工作流子智能体模型护栏",
+    "description": "把「子智能体」插件里设置的「允许选择的模型」白名单也管到 workflow 这条路上：workflow 工具挂载时向系统提示词注入一段「先查 list_subagent_models、只从授权路由里选」的指导（软），并在 tools/pre-execute 拦截 workflow 调用、静态读出脚本里 agent() 指定的 provider/model，越权则 deny 且 reason 里点名非法路由、列出允许路由并给出两条出路（硬）。"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "tools/*.mjs",
+    "verification/*.txt",
+    "icon.svg",
+    "docs",
+    "LICENSE",
+    "README.md",
+    "README.en.md",
+    "VERIFICATION.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

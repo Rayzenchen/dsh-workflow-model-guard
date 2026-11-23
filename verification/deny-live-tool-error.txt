@@ -1,0 +1,13 @@
+Error: Blocked by the Session route policy: a workflow script may only hand a child agent a route from this Session's allowed list.
+
+Not allowed:
+- acme/nope — provider "acme" is not in the allowed list (line 1: provider: 'acme')
+
+Allowed routes for this Session:
+- passion8/grok-4.7
+- pinaic/deepseek-v4.1-flash
+- opencode-go/deepseek-v4.1-flash
+
+Two ways to fix this, then call the workflow tool again:
+1. Use only a route from the list above (call `list_subagent_models` to see the live list and each model's reasoning efforts).
+2. Omit `provider` and `model` from that `agent()` call — the child then inherits the parent Agent route, which is always allowed.

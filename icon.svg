@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" role="img" aria-label="Delegation routes kept inside the Session policy">
+  <defs>
+    <linearGradient id="wm-shield" x1="9" y1="5" x2="27" y2="31" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC64D"/>
+      <stop offset="1" stop-color="#E5861A"/>
+    </linearGradient>
+  </defs>
+  <!-- A shield: the policy that guards delegation. -->
+  <path d="M18 3.8 L28.9 8.1 V17.3 C28.9 23.9 24.3 29.2 18 31.5 C11.7 29.2 7.1 23.9 7.1 17.3 V8.1 Z"
+        fill="url(#wm-shield)"/>
+  <!-- One delegation forking into two child routes. -->
+  <path d="M18 25.6 V21.4 M18 21.4 C18 18.4 15.7 16.2 12.9 16.2 M18 21.4 C18 18.4 20.3 16.2 23.1 16.2"
+        fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round"/>
+  <circle cx="11.4" cy="16.2" r="1.9" fill="#FFFFFF"/>
+  <circle cx="24.6" cy="16.2" r="1.9" fill="#FFFFFF"/>
+</svg>
